@@ -1,0 +1,11 @@
+{
+    "vpddata":[
+	    {
+            "MAC0": "mac0",
+            "MAC1": "mac1",
+            "PN": "pn",
+            "SN": "sn",
+            "PTN": "ptn"
+		}
+	]
+}
