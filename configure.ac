@@ -17,6 +17,9 @@ AM_PATH_PYTHON([2.7],
 PKG_CHECK_MODULES([SDBUSPLUS], [sdbusplus])
 PKG_CHECK_MODULES([PHOSPHOR_LOGGING], [phosphor-logging])
 
+## test
+AC_DEFINE(INVENTORY_JSON, "/usr/share/vpd/vpd_inventory.json", [JSON file that defines inventory blueprint])
+
 # Suppress the --with-libtool-sysroot error
 LT_INIT
 
