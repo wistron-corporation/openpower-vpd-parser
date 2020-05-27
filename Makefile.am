@@ -31,14 +31,6 @@ ibm_read_vpd_SOURCES = \
 ibm_read_vpd_LDFLAGS = $(SDBUSPLUS_LIBS) $(PHOSPHOR_LOGGING_LIBS)
 ibm_read_vpd_CXXFLAGS = $(SDBUSPLUS_CFLAGS) $(PHOSPHOR_LOGGING_CFLAGS)
 
-bin_PROGRAMS += vpd-tool
-vpd_tool_SOURCES = \
-        vpd_tool.cpp \
-        vpd_tool_impl.cpp
-
-vpd_tool_LDFLAGS = $(SDBUSPLUS_LIBS)
-vpd_tool_CXXFLAGS = $(SDBUSPLUS_CFLAGS)
-
 else
 # Be sure to build these before compiling
 BUILT_SOURCES = \
@@ -81,6 +73,14 @@ openpower_read_vpd_SOURCES = \
 	utils.cpp
 openpower_read_vpd_LDFLAGS = $(SDBUSPLUS_LIBS) $(PHOSPHOR_LOGGING_LIBS)
 openpower_read_vpd_CXXFLAGS = $(SDBUSPLUS_CFLAGS) $(PHOSPHOR_LOGGING_CFLAGS)
+
+bin_PROGRAMS += vpd-tool
+vpd_tool_SOURCES = \
+        vpd_tool.cpp \
+        vpd_tool_impl.cpp
+
+vpd_tool_LDFLAGS = $(SDBUSPLUS_LIBS)
+vpd_tool_CXXFLAGS = $(SDBUSPLUS_CFLAGS)
 endif
 
 SUBDIRS = test

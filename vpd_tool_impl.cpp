@@ -195,7 +195,7 @@ json interfaceDecider(json& itemEEPROM)
         throw runtime_error("Extra Interfaces not found");
     }
 
-    bool exIntfCheck = false;
+    //bool exIntfCheck = false;
     json output = json::object({});
 
     if (itemEEPROM.value("inherit", true))
@@ -211,7 +211,7 @@ json interfaceDecider(json& itemEEPROM)
         {
             if (!(ex.value().is_null()))
             {
-                exIntfCheck = true;
+                //exIntfCheck = true;
                 getExtraInterfaceProperties(itemEEPROM.at("inventoryPath"),
                                             ex.key(), ex.value(),
                                             itemEEPROM["extraInterfaces"], js);
