@@ -3,34 +3,34 @@
 using namespace std;
 
 /**
- * The parameter which is used by fstream(). 
+ * The parameter which is used by fstream().
  * - the file of eeprom.
  */
 fstream efile;
 
 /**
- * The parameter which is used by CLI. 
+ * The parameter which is used by CLI.
  * - the VPD data.
  */
 string value;
 
 /**
- * The parameter which is used by parseJsonFromFile(). 
+ * The parameter which is used by parseJsonFromFile().
  * - the path of eeprom.
  */
 string eepromPATH;
 
 /**
- * Five kinds of VPD data, used by getDataAddr() 
+ * Five kinds of VPD data, used by getDataAddr()
  * to get addr of VPD data.
  */
 enum class vpdData : int
 {
     VP,
-	VS,
-	DR,
-	B1,
-	B1_1
+    VS,
+    DR,
+    B1,
+    B1_1
 };
 
 /**
