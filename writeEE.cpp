@@ -1,16 +1,15 @@
-#include <iostream>
-#include <string>
-#include <fstream>
-#include <algorithm>
 #include "writeEE.hpp"
-#include <CLI/CLI.hpp>
 
 #include <bits/stdc++.h>
 #include <fcntl.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 
+#include <CLI/CLI.hpp>
+#include <algorithm>
+#include <iostream>
 #include <nlohmann/json.hpp>
+#include <string>
 
 static const auto EEPROM_JSON =
     "/usr/share/openpower-fru-vpd/write-eeprom.json";
