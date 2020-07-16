@@ -1,0 +1,47 @@
+{
+  "commonInterfaces": {
+    "xyz.openbmc_project.Inventory.Decorator.Asset": {
+      "PartNumber": {
+        "recordName": "OPFR",
+        "keywordName": "PN"
+      },
+      "SerialNumber": {
+        "recordName": "OPFR",
+        "keywordName": "SN"
+      },
+      "Manufacturer": {
+        "recordName": "OPFR",
+        "keywordName": "VN"
+      }
+    },
+    "xyz.openbmc_project.Inventory.Item": {
+      "PrettyName": {
+        "recordName": "OPFR",
+        "keywordName": "DR"
+      }
+    },
+    "xyz.openbmc_project.Network.MACAddress": {
+      "MACAddress": {
+        "recordName": "VINI",
+        "keywordName": "B1"
+      },
+      "MACAddress": {
+        "recordName": "OPFR",
+        "keywordName": "B1"
+      }
+    }
+  },
+  "frus": {
+    "/sys/devices/platform/ahb/ahb:apb/ahb:apb:bus@1e78a000/1e78a340.i2c-bus/i2c-8/8-0050/eeprom": [
+	{
+      "inventoryPath": "/system/chassis/motherboard/bmc",
+      "extraInterfaces": {
+        "xyz.openbmc_project.Inventory.Item.Bmc": null,
+		"com.ibm.ipzvpd.Location" : {
+		    "Location" : "UFcs-P0-C5"
+	      }
+	    }
+      }
+    ]
+  }
+}
