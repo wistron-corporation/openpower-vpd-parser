@@ -10,6 +10,7 @@ enum class Record
 {
     VINI, /**< Initial information, common to all OpenPOWER FRUs */
     OPFR, /**< OpenPOWER FRU information, common to all OpenPOWER FRUs */
+    VNDR,
     OSYS  /**< Information specific to a system board */
 };
 
@@ -30,6 +31,12 @@ template <>
 constexpr const char* getRecord<Record::OPFR>()
 {
     return "OPFR";
+}
+
+template <>
+constexpr const char* getRecord<Record::VNDR>()
+{
+    return "VNDR";
 }
 
 template <>
@@ -55,6 +62,7 @@ enum class Keyword
     MM, /**< FRU model */
     UD, /**< System UUID */
     VS, /**< OpenPower serial number */
+    IN, /**< OpenPower serial number */
     VP  /**< OpenPower part number */
 };
 
@@ -129,6 +137,12 @@ template <>
 constexpr const char* getKeyword<Keyword::VS>()
 {
     return "VS";
+}
+
+template <>
+constexpr const char* getKeyword<Keyword::IN>()
+{
+    return "IN";
 }
 
 template <>
